@@ -11,9 +11,11 @@ async function bootstrap() {
     forbidNonWhitelisted: true
   }));
 
-  app.enableCors();
+  app.enableCors({
+    origin: '*',
+  });
 
-  await app.listen(process.env.PORT ?? 3001);
+  await app.listen(process.env.PORT ?? 3001, '0.0.0.0');
 }
 
 bootstrap();
