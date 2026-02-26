@@ -19,7 +19,7 @@ import { hours, ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
         throttlers: [
           {
             ttl: hours(1),
-            limit: 3
+            limit: 1000
           }
         ]
       }
